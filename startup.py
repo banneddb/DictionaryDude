@@ -3,11 +3,9 @@ from typing import Final
 import os
 from discord.ext import commands
 from dotenv import load_dotenv
-import sys
-
 load_dotenv()
-#TOKEN = os.getenv('DISC_TOKEN')
-TOKEN = os.getenv("DISC_TOKEN")
+
+TOKEN = os.getenv('DISC_TOKEN')
 intents = discord.Intents.default()
 intents.message_content = True  #Can read messages
 bot = commands.Bot(command_prefix="?", intents=intents)
@@ -51,4 +49,6 @@ async def bothelp(ctx):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Invalid command. Send ?bothelp for more information.")
+
+
 bot.run(TOKEN)
