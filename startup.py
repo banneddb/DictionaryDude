@@ -20,7 +20,10 @@ async def on_ready():
         await channel.send("Bot is online.")
         print('Successfully logged in')
 
-
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("Invalid command. Send ?bothelp for more information.")
 
 async def main():
     for filename in os.listdir('./cmds'):
