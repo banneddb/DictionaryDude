@@ -33,3 +33,6 @@ async def bothelp(ctx):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Invalid command. Send ?bothelp for more information.")
+
+async def setup(bot):
+    bot.add_command(shutdown, bothelp, on_command_error)

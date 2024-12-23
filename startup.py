@@ -1,5 +1,6 @@
 import discord
 from typing import Final
+import asyncio
 import os
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -11,6 +12,16 @@ intents.message_content = True  #Can read messages
 bot = commands.Bot(command_prefix="?", intents=intents)
 statusChannel = 1319479548013711461
 
+
+@bot.event
+async def on_ready():
+    channel = bot.get_channel(statusChannel)
+    if channel is not None:
+        await channel.send("Bot is online.")
+        print('Successfully logged in')
+
+
+
 async def main():
     for filename in os.listdir('./cmds'):
         if filename.endswith('.py'):
@@ -20,4 +31,4 @@ async def main():
                 print(f'Error loading cmds {filename}:\n{e}')
     await bot.start(TOKEN)
 
-bot.run(TOKEN)
+asyncio.run(main())
