@@ -27,14 +27,11 @@ class GenCommands(commands.Cog):
             data = response.json()
             if data:
                 definition = data[0].get('shortdef')
+                await ctx.send(f"According to the Merriam-Webster Collegiate Dictionary,'{word}' can be best defined as {definition}")
             else:
                 await ctx.send(f"No definition of {word} was found. Try again.")
         else:
             await ctx.send("There was an error processing your request. Try again.")
-
-
-        
-
 
 async def setup(bot):
    await bot.add_cog(GenCommands(bot))
