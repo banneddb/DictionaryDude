@@ -23,11 +23,13 @@ class GenCommands(commands.Cog):
     async def define(self, ctx, *, word: str):
         url = f"https://www.dictionaryapi.com/api/v3/references/collegiate/json/{word}?key={DICT_TOKEN}"
         response = requests.get(url)
+        word = word.capitalize
         if response.status_code == 200:
             data = response.json()
             if data:
-                definition = data[0].get('shortdef')
-                await ctx.send(f"According to the Merriam-Webster Collegiate Dictionary,'{word}' can be best defined as {definition}")
+                definitionList = data[0].get('shortdef')
+                definition = str(definitionList[0])
+                await ctx.send(f"According to the Merriam-Webster Collegiate Dictionary, '{word}' can be best defined as {definition}")
             else:
                 await ctx.send(f"No definition of {word} was found. Try again.")
         else:
