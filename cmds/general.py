@@ -38,9 +38,11 @@ class GenCommands(commands.Cog):
                     color=discord.Color.blue()
                 )
                 embed.add_field(name="Part of Speech", value="Noun", inline=True)
+                embed.add_field(name="Synonyms", value = "WIP", inline=True)
                 embed.set_thumbnail(url="https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png")
                 embed.timestamp = datetime.datetime.now()
                 embed.set_footer(text="Retrieved from the Merriam-Webster's Collegiate Dictionary")
+                embed.set_author(name = ctx.author.name)
                 await ctx.send(embed=embed)
             elif len(data) == 0:
                 await ctx.send(f"No definition of {word} was found. Try again.")
