@@ -36,6 +36,7 @@ class GenCommands(commands.Cog):
                     description= definition.capitalize(),
                     color=discord.Color.blue()
                 )
+                embed.add_field(name="Part of Speech", value="Noun", inline=True)
                 embed.set_thumbnail(url="https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png")
                 await ctx.send(embed=embed)
                 #await ctx.send(f"According to the Merriam-Webster Collegiate Dictionary, '{word}' can be best defined as {definition}")
