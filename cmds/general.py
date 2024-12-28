@@ -5,6 +5,7 @@ import requests
 from dotenv import load_dotenv
 import os
 import time
+import datetime
 
 load_dotenv()
 DICT_TOKEN = os.getenv('DICT_TOKEN')
@@ -38,8 +39,9 @@ class GenCommands(commands.Cog):
                 )
                 embed.add_field(name="Part of Speech", value="Noun", inline=True)
                 embed.set_thumbnail(url="https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png")
+                embed.timestamp = datetime.datetime.now()
+                embed.set_footer(text="Retrieved from the Merriam-Webster's Collegiate Dictionary")
                 await ctx.send(embed=embed)
-                #await ctx.send(f"According to the Merriam-Webster Collegiate Dictionary, '{word}' can be best defined as {definition}")
             elif len(data) == 0:
                 await ctx.send(f"No definition of {word} was found. Try again.")
         else:
