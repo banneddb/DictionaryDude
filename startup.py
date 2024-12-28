@@ -27,7 +27,7 @@ async def on_command_error(ctx, error):
 
 async def main():
     for filename in os.listdir('./cmds'):
-        if filename.endswith('.py'):
+        if filename.endswith('.py') and not filename.startswith('__init__'):
             try:
                 await bot.load_extension(f'cmds.{filename[:-3]}')
             except Exception as e:

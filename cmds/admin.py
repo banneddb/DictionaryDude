@@ -21,7 +21,7 @@ class AdminCommands(commands.Cog):
         if ctx.channel.id == statusChannel:
             if ctx.author.id == 275064408940740630:
                 await ctx.send("Bot is shutting down and offline.")
-                await bot.close()
+                await self.bot.close()
                 print("Successfully logged out")
             else:
                 await ctx.send("You do not have permission to shutdown the bot.")
