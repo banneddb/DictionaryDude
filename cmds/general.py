@@ -39,6 +39,7 @@ class GenCommands(commands.Cog):
                 )
                 embed.add_field(name="Part of Speech", value= data[0].get('fl') , inline=False)
                 embed.add_field(name="Synonyms", value = "WIP", inline=True)
+                embed.add_field(name="Example Sentence", value="WIP", inline=False)
                 embed.set_thumbnail(url="https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png")
                 embed.timestamp = datetime.datetime.now()
                 embed.set_footer(text="Retrieved from the Merriam-Webster's Collegiate Dictionary")
