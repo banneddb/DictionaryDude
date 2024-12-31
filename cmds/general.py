@@ -31,6 +31,7 @@ class GenCommands(commands.Cog):
             data = response.json()
             if data:
                 definitionList = data[0].get('shortdef')
+                #exampleList = data[0].get('examples:')
                 definition = str(definitionList[0])
                 embed = discord.Embed(
                     title = word.capitalize(),
@@ -39,7 +40,7 @@ class GenCommands(commands.Cog):
                 )
                 embed.add_field(name="Part of Speech", value= data[0].get('fl') , inline=False)
                 embed.add_field(name="Synonyms", value = "WIP", inline=True)
-                embed.add_field(name="Example ", value=data[0].get('examples:'), inline=False)
+                embed.add_field(name="Example", value="WIP", inline=False)
                 embed.set_thumbnail(url="https://merriam-webster.com/assets/mw/static/app-css-images/logos/mw-logo.png")
                 embed.timestamp = datetime.datetime.now()
                 embed.set_footer(text="Retrieved from the Merriam-Webster's Collegiate Dictionary")
