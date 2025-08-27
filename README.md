@@ -26,8 +26,9 @@ DictionaryDude is a simple yet powerful **Discord bot** that lets you instantly 
    pip install -r requirements.txt
 
 4. Add your Discord Bot Token and Merriam-Webster API Key to a .env file:
-```bash
-  DISCORD_TOKEN=your_discord_token_here
-  MW_API_KEY=your_api_key_here
+   ```bash
+   DISCORD_TOKEN=your_discord_token_here
+   MW_API_KEY=your_api_key_here
+
 
 5. Run the bot by typing in 'python bot.py' into the console and enjoy!
