@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="images/DDLOGO.png" alt="DictionaryDude Banner" width="600">
+</p>
+
+
+
 # 📚 DictionaryDude
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
