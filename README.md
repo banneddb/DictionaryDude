@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/dictionarydude_banner_800x200.png" alt="DictionaryDude Banner" width="300">
+  <img src="images/DDLOGO.png" alt="DictionaryDude Banner" width="300">
 </p>
 
 
