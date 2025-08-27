@@ -20,11 +20,14 @@ DictionaryDude is a simple yet powerful **Discord bot** that lets you instantly 
    ```bash
    git clone https://github.com/bannedb/dictionarydude.git
    cd dictionarydude
+   
 2. Install dependencies
+   ```bash
    pip install -r requirements.txt
 
-3. Add your Discord Bot Token and Merriam-Webster API Key to a .env file:
+4. Add your Discord Bot Token and Merriam-Webster API Key to a .env file:
+```bash
   DISCORD_TOKEN=your_discord_token_here
   MW_API_KEY=your_api_key_here
 
-Run the bot by typing in 'python bot.py' into the console and enjoy!
+5. Run the bot by typing in 'python bot.py' into the console and enjoy!
